@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
 
 const Header = () => {
@@ -17,12 +18,20 @@ const Header = () => {
                     >
                     </Nav>
                     <Nav>
-                    <Nav.Link href="#action1">Home</Nav.Link>
-                        <Nav.Link href="#action1">Donation</Nav.Link>
-                        <Nav.Link href="#action1">Events</Nav.Link>
-                        <Nav.Link href="#action1">Blog</Nav.Link>
+                    <Nav.Link><Link className='text-decoration-none text-dark' to="/">Home</Link></Nav.Link>
+                        <Nav.Link>
+                            <Link className='text-decoration-none text-dark' to="/donation">Donation</Link>
+                        </Nav.Link>
+                        <Nav.Link>
+                            <Link className='text-decoration-none text-dark' to="/events">Events</Link>
+                        </Nav.Link>
+                        <Nav.Link>
+                            <Link className='text-decoration-none text-dark' to="/blog">Blog</Link>
+                        </Nav.Link>
 
-                        <Button variant="primary mx-3">Register</Button>
+                        <Button variant="primary mx-3">
+                            <Link className='text-decoration-none text-white' to="/register">Register</Link>
+                        </Button>
                         <Button variant="secondary">Admin</Button>
                     </Nav>
                     </Navbar.Collapse>
