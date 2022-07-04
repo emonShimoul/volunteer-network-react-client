@@ -1,25 +1,30 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import logo from '../../images/logo.png';
 
 const Header = () => {
     return (
         <div>
             <Navbar bg="light" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+                    <Navbar.Brand href="#" className="me-auto my-2 my-lg-0"><img width="150px" src={logo} alt="Logo" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                     <Nav
                         className="me-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px' }}
+                        style={{ maxHeight: '100px' }}c
                         navbarScroll
                     >
-                        <Nav.Link href="#action1">Home</Nav.Link>
                     </Nav>
-                    <div className="d-flex me-2">
-                        <Button variant="primary me-3">Register</Button>
+                    <Nav>
+                    <Nav.Link href="#action1">Home</Nav.Link>
+                        <Nav.Link href="#action1">Donation</Nav.Link>
+                        <Nav.Link href="#action1">Events</Nav.Link>
+                        <Nav.Link href="#action1">Blog</Nav.Link>
+
+                        <Button variant="primary mx-3">Register</Button>
                         <Button variant="secondary">Admin</Button>
-                    </div>
+                    </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
