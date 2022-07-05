@@ -1,12 +1,24 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import logo from '../../images/logo.png';
 
 const Header = () => {
+    const { pathname } = useLocation();
+
+    // logic for different navbar styles for login and registration route
+    let loginStyle;
+    if(pathname === '/register'){
+        loginStyle = {
+            display: "none"
+        };
+    }
+    else{
+        
+    }
     return (
         <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="light" expand="lg" style={loginStyle}>
                 <Container>
                     <Navbar.Brand href="#" className="me-auto my-2 my-lg-0"><img width="150px" src={logo} alt="Logo" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
