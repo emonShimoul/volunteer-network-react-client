@@ -1,0 +1,12 @@
+.register-form {
+    border: 1px solid gray;
+    width: 450px;
+    padding: 30px;
+    margin: 0 auto;
+    /* background-color: white; */
+}
+.input-field {
+    display: block;
+    margin: 30px auto 0 auto;
+    padding: 5px;
+}
