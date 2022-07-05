@@ -11,27 +11,38 @@ const Home = () => {
                     <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
                 </div>
 
-                <div className="events mt-5">
-                    <div className='event'>
-                        <img src="https://i.ibb.co/ZdrCTSz/child-Support.png" alt="Child Support" />
-                        <div className='empty'></div>
-                        <p>Child Support</p>
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+                    <div class="col">
+                        <div class="card">
+                        <img src="..." class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                        </div>
                     </div>
-                    <div className='event'>
-                        <img src="https://i.ibb.co/8snPvmQ/refuse-Shelter.png" alt="Refuge Shelter" />
-                        <div className='empty'></div>
-                        <p>Animal Shelter</p>
+                    <div class="col">
+                        <div class="card">
+                        <img src="..." class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                        </div>
                     </div>
-                    <div className='event'>
-                        <img src="https://i.ibb.co/fScZ74w/food-Charity.png" alt="Food Charity" />
-                        <div className='empty'></div>
-                        <p>Food Charity</p>
+                    <div class="col">
+                        <div class="card">
+                        <img src="..." class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                        </div>
                     </div>
-                    <div className='event'>
-                        <img src="https://i.ibb.co/34bDjLB/animal-Shelter.png" alt="Animal Shelter" />
-                        <div className='empty'></div>
-                        <div className='empty'></div>
-                        <p>Host a clothing swap</p>
+                    <div class="col">
+                        <div class="card">
+                        <img src="..." class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>

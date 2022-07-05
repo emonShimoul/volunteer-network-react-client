@@ -4,22 +4,22 @@
     grid-column-gap: 20px;
     align-items: center;
 }
-
 .events img {
     width: 200px;
 }
-
 .event {
     position: relative;
     text-align: center;
-    /* color: white; */
+    z-index: -5;
 }
-
 .event .empty {
     position: absolute;
     bottom: 40px;
     right: 0;
     background-color: red;
     padding: 20px 100px;
-    /* z-index: -1; */
+    z-index: -1;
+}
+.event p {
+    margin-bottom: 3rem;
 }
