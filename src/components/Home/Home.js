@@ -12,20 +12,25 @@ const Home = () => {
                 </div>
 
                 <div className="events mt-5">
-                    <div>
+                    <div className='event'>
                         <img src="https://i.ibb.co/ZdrCTSz/child-Support.png" alt="Child Support" />
+                        <div className='empty'></div>
                         <p>Child Support</p>
                     </div>
-                    <div>
+                    <div className='event'>
                         <img src="https://i.ibb.co/8snPvmQ/refuse-Shelter.png" alt="Refuge Shelter" />
+                        <div className='empty'></div>
                         <p>Animal Shelter</p>
                     </div>
-                    <div>
+                    <div className='event'>
                         <img src="https://i.ibb.co/fScZ74w/food-Charity.png" alt="Food Charity" />
+                        <div className='empty'></div>
                         <p>Food Charity</p>
                     </div>
-                    <div>
+                    <div className='event'>
                         <img src="https://i.ibb.co/34bDjLB/animal-Shelter.png" alt="Animal Shelter" />
+                        <div className='empty'></div>
+                        <div className='empty'></div>
                         <p>Host a clothing swap</p>
                     </div>
                 </div>

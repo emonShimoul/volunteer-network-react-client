@@ -8,3 +8,18 @@
 .events img {
     width: 200px;
 }
+
+.event {
+    position: relative;
+    text-align: center;
+    /* color: white; */
+}
+
+.event .empty {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    background-color: red;
+    padding: 20px 100px;
+    /* z-index: -1; */
+}
