@@ -1,0 +1,10 @@
+.events {
+    display: flex;
+    justify-content: center;
+    grid-column-gap: 20px;
+    align-items: center;
+}
+
+.events img {
+    width: 200px;
+}
