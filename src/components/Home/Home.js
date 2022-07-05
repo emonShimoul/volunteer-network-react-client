@@ -11,17 +11,17 @@ const Home = () => {
                     <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
                 </div>
 
-                <div className="events">
+                <div className="events mt-5">
                     <div>
-                        <img src="https://i.ibb.co/34bDjLB/animal-Shelter.png" alt="Animal Shelter" />
+                        <img src="https://i.ibb.co/ZdrCTSz/child-Support.png" alt="Child Support" />
                         <p>Child Support</p>
                     </div>
                     <div>
-                        <img src="https://i.ibb.co/34bDjLB/animal-Shelter.png" alt="Animal Shelter" />
+                        <img src="https://i.ibb.co/8snPvmQ/refuse-Shelter.png" alt="Refuge Shelter" />
                         <p>Animal Shelter</p>
                     </div>
                     <div>
-                        <img src="https://i.ibb.co/34bDjLB/animal-Shelter.png" alt="Animal Shelter" />
+                        <img src="https://i.ibb.co/fScZ74w/food-Charity.png" alt="Food Charity" />
                         <p>Food Charity</p>
                     </div>
                     <div>
