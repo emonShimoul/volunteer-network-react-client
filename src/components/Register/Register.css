@@ -1,12 +1,14 @@
 .register-form {
-    border: 1px solid gray;
-    width: 450px;
-    padding: 30px;
+    border: 1px solid #b39898;
+    width: 480px;
+    padding: 30px 40px;
     margin: 0 auto;
     /* background-color: white; */
 }
 .input-field {
     display: block;
-    margin: 30px auto 0 auto;
+    margin: 20px auto 0 auto;
     padding: 5px;
+    border: 1px solid #b39898;
+    border-radius: 5px;
 }

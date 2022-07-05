@@ -10,12 +10,12 @@ const Register = () => {
     return (
         <div className='container mt-4 mb-5'>
             <img src={logo} alt="" width="180px" className='mb-4' />
-            <div className="register-form">
+            <div className="register-form rounded">
                 <h4 className='mb-4 fw-bold text-start'>Register as a Volunteer</h4>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input {...register("firstName")} type="text" placeholder="Full Name" className='input-group input-field' />
                     <input {...register("lastName")} type="email" placeholder="Email" className='input-group input-field' />
-                    <input {...register("date")} type="date" placeholder="Date" className='input-group input-field' />
+                    <input {...register("date")} type="date" className='input-group input-field' />
                     <input {...register("description")} type="text" placeholder="Description" className='input-group input-field' />
                     <input {...register("event")} type="text" placeholder="Event Name" className='input-group input-field' />
                     <input type="submit" className='btn btn-primary mt-4 px-5' value="Registration" />
