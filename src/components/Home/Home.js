@@ -11,12 +11,12 @@ const Home = () => {
                     <button className="btn btn-primary" type="button" id="button-addon2">Search</button>
                 </div>
 
-                <div className="row row-cols-1 row-cols-md-4 g-4">
+                <div className="row row-cols-1 row-cols-md-4 g-4 mt-4">
                     <div className="col">
                         <div className="card event-card">
                             <img src="https://i.ibb.co/34bDjLB/animal-Shelter.png" className="card-img-top" alt="..." />
                             <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
+                                <h5 className="card-title text-white">Card title</h5>
                             </div>
                         </div>
                     </div>
@@ -24,7 +24,7 @@ const Home = () => {
                         <div className="card event-card">
                             <img src="https://i.ibb.co/Lv9HgmP/babySit.png" className="card-img-top" alt="..." />
                             <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
+                                <h5 className="card-title text-white">Card title</h5>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@ const Home = () => {
                         <div className="card event-card">
                             <img src="https://i.ibb.co/8j3BVwX/bird-House.png" className="card-img-top" alt="..." />
                             <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
+                                <h5 className="card-title text-white">Card title</h5>
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@ const Home = () => {
                         <div className="card event-card">
                             <img src="https://i.ibb.co/ZdrCTSz/child-Support.png" className="card-img-top" alt="..." />
                             <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
+                                <h5 className="card-title text-white">Card title</h5>
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@ const Home = () => {
                         <div className="card event-card">
                             <img src="https://i.ibb.co/ZdrCTSz/child-Support.png" className="card-img-top" alt="..." />
                             <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
+                                <h5 className="card-title text-white">Card title</h5>
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@ const Home = () => {
                         <div className="card event-card">
                             <img src="https://i.ibb.co/8j3BVwX/bird-House.png" className="card-img-top" alt="..." />
                             <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
+                                <h5 className="card-title text-white">Card title</h5>
                             </div>
                         </div>
                     </div>
