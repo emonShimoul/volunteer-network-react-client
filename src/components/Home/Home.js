@@ -44,22 +44,6 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col">
-                        <div className="card event-card">
-                            <img src="https://i.ibb.co/ZdrCTSz/child-Support.png" className="card-img-top" alt="..." />
-                            <div className="card-body">
-                                <h5 className="card-title text-white">Card title</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col">
-                        <div className="card event-card">
-                            <img src="https://i.ibb.co/8j3BVwX/bird-House.png" className="card-img-top" alt="..." />
-                            <div className="card-body">
-                                <h5 className="card-title text-white">Card title</h5>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
