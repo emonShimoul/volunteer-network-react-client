@@ -9,7 +9,7 @@ const Register = () => {
     const onSubmit = data => console.log(data);
     return (
         <div className='container mt-4 mb-5'>
-            <img src={logo} alt="" width="180px" className='mb-4' />
+            <Link to="/"><img src={logo} alt="" width="180px" className='mb-4' /></Link>
             <div className="register-form rounded">
                 <h4 className='mb-4 fw-bold text-start'>Register as a Volunteer</h4>
                 <form onSubmit={handleSubmit(onSubmit)}>

@@ -9,7 +9,7 @@ import '../Register/Register.css';
 const Login = () => {
     return (
         <div className='container mt-4 mb-5'>
-            <img src={logo} alt="" width="180px" className='mb-5' />
+            <Link to="/"><img src={logo} alt="" width="180px" className='mb-5' /></Link>
             <div clnaahassName="login">
                 <h3 className='mb-4'>Login With</h3>
                 <Button variant="outline-dark" className='rounded-pill'><FontAwesomeIcon icon={faG} /> <span className='px-5'>Continue with Google</span></Button>
