@@ -12,3 +12,12 @@
     border: 1px solid #b39898;
     border-radius: 5px;
 }
+
+/* login page */
+.login{
+    border: 1px solid #b39898;
+    width: 480px;
+    padding: 150px 40px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
