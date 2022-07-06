@@ -8,7 +8,7 @@ const Header = () => {
 
     // logic for different navbar styles for login and registration route
     let loginStyle;
-    if(pathname === '/register'){
+    if(pathname === '/register' || pathname === '/login'){
         loginStyle = {
             display: "none"
         };
