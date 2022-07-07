@@ -46,7 +46,10 @@ const Header = () => {
                              
                                     <Button variant="secondary">Admin</Button>
                                 </div> :
-                                <Button variant="secondary" onClick={logOut}>Log Out</Button>
+                                <div className='pt-1'>
+                                    <span className='fw-bold ms-2 me-3'>{user.displayName}</span>
+                                    <Button variant="secondary" onClick={logOut}>Log Out</Button>
+                                </div>
                             }
                         
                     </Nav>
