@@ -19,7 +19,6 @@ const Register = () => {
                     <input {...register("description")} type="text" placeholder="Description" className='input-group input-field' />
                     <input {...register("event")} type="text" placeholder="Event Name" className='input-group input-field' />
                     <input type="submit" className='btn btn-primary mt-4 px-5' value="Registration" />
-                    <p className='mt-2'><Link to="/login">Already Have an Account?</Link></p>
                 </form>
             </div>
         </div>
