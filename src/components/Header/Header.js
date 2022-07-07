@@ -1,12 +1,20 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import useFirebase from '../../hooks/useFirebase';
 import logo from '../../images/logo.png';
 
 const Header = () => {
     const { pathname } = useLocation();
     const {user, logOut} = useFirebase();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const redirect_uri = location.state?.from || '/login';
+
+    const handleLogOut = () => {
+        logOut();
+        navigate(redirect_uri);
+    }
     // console.log(user);
 
     // logic for different navbar styles for login and registration route
@@ -48,7 +56,7 @@ const Header = () => {
                                 </div> :
                                 <div className='pt-1'>
                                     <span className='fw-bold ms-2 me-3'>{user.displayName}</span>
-                                    <Button variant="secondary" onClick={logOut}>Log Out</Button>
+                                    <Button variant="secondary" onClick={handleLogOut}>Log Out</Button>
                                 </div>
                             }
                         
