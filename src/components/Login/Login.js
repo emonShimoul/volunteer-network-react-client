@@ -11,17 +11,13 @@ const Login = () => {
     const {googleLogin} = useFirebase();
     const navigate = useNavigate();
     const location = useLocation();
-    const redirect_uri = location.state?.from || '/events';
+    const redirect_uri = location.state?.from || '/register';
 
     const handleGoogleLogin = () => {
         googleLogin()
         .then(result => {
             // console.log(result);
             navigate(redirect_uri);
-        })
-        .catch(error => {
-            const errorMessage = error.message;
-            console.log(errorMessage);
         })
     }
     return (

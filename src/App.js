@@ -7,6 +7,7 @@ import Home from './components/Home/Home';
 import Blog from './components/Blog/Blog';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/donation' element={<Donation />} />
-          <Route path='/events' element={<Events />} />
+          <Route path='/events' element={<PrivateRoute><Events /></PrivateRoute>} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
