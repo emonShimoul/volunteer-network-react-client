@@ -26,7 +26,7 @@ const Login = () => {
             <div className="login">
                 <h3 className='mb-4'>Login With</h3>
                 <Button variant="outline-dark" className='rounded-pill' onClick={handleGoogleLogin}><FontAwesomeIcon icon={faG} /> <span className='px-5'>Continue with Google</span></Button>
-                <p className='mt-2'><Link to="/register">Don't have an Account?</Link></p>
+                <p className='mt-2'>Don't have an Account? <Link to="/register">Create New Account?</Link></p>
             </div>
         </div>
     );
