@@ -30,7 +30,7 @@ const Header = () => {
         <div>
             <Navbar bg="light" expand="lg" style={loginStyle}>
                 <Container>
-                    <Navbar.Brand href="#" className="me-auto my-2 my-lg-0"><img width="150px" src={logo} alt="Logo" /></Navbar.Brand>
+                    <NavLink to="/" className="me-auto my-2 py-2 my-lg-0"><img width="170px" src={logo} alt="Logo" /></NavLink>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                     <Nav
