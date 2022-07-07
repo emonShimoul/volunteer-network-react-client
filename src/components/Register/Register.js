@@ -15,8 +15,8 @@ const Register = () => {
             <div className="register-form rounded">
                 <h4 className='mb-4 fw-bold text-start'>Register as a Volunteer</h4>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input {...register("name")} type="text" value={user.displayName} className='input-group input-field' placeholder="Name" />
-                    <input {...register("email")} type="email" value={user.email} placeholder="Email" className='input-group input-field' />
+                    <input {...register("name")} type="text" value={user.displayName || ''} className='input-group input-field' placeholder="Name" />
+                    <input {...register("email")} type="email" value={user.email || ''} placeholder="Email" className='input-group input-field' />
                     <input {...register("date")} type="date" className='input-group input-field' />
                     <input {...register("description")} type="text" placeholder="Description" className='input-group input-field' />
                     <input {...register("event")} type="text" placeholder="Event Name" className='input-group input-field' />
