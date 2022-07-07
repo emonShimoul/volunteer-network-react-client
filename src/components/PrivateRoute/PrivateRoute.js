@@ -5,8 +5,6 @@ import useFirebase from '../../hooks/useFirebase';
 
 const PrivateRoute = ({children}) => {
     const {user, isLoading} = useFirebase();
-    console.log({children});
-    console.log(user.displayName);
     if(isLoading){
         return <Spinner animation="border" variant="danger" />
     }

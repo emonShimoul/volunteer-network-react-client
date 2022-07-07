@@ -15,7 +15,6 @@ const Header = () => {
         logOut();
         navigate(redirect_uri);
     }
-    // console.log(user);
 
     // logic for different navbar styles for login and registration route
     let loginStyle;
