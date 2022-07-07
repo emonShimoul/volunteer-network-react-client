@@ -1,10 +1,13 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
 import logo from '../../images/logo.png';
 
 const Header = () => {
     const { pathname } = useLocation();
+    const {user, logOut} = useFirebase();
+    // console.log(user);
 
     // logic for different navbar styles for login and registration route
     let loginStyle;
@@ -37,9 +40,15 @@ const Header = () => {
                         <NavLink className='text-decoration-none text-dark px-3' to="/blog">Blog</NavLink>
                         </div>
 
-                        <Link className='text-decoration-none text-white' to="/register"><Button variant="primary mx-3">Register</Button></Link>
+                            {(!user.email) ?
+                                <div>
+                                    <Link className='text-decoration-none text-white' to="/register"><Button variant="primary mx-3">Register</Button></Link>
                              
-                        <Button variant="secondary">Admin</Button>
+                                    <Button variant="secondary">Admin</Button>
+                                </div> :
+                                <Button variant="secondary" onClick={logOut}>Log Out</Button>
+                            }
+                        
                     </Nav>
                     </Navbar.Collapse>
                 </Container>
