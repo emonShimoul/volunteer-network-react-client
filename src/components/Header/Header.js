@@ -23,9 +23,7 @@ const Header = () => {
             display: "none"
         };
     }
-    else{
-        
-    }
+    else{}
     return (
         <div>
             <Navbar bg="light" expand="lg" style={loginStyle}>
@@ -58,7 +56,6 @@ const Header = () => {
                                     <Button variant="secondary" onClick={handleLogOut}>Log Out</Button>
                                 </div>
                             }
-                        
                     </Nav>
                     </Navbar.Collapse>
                 </Container>

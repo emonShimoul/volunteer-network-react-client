@@ -16,7 +16,6 @@ const Login = () => {
     const handleGoogleLogin = () => {
         googleLogin()
         .then(result => {
-            // console.log(result);
             navigate(redirect_uri);
         })
     }
