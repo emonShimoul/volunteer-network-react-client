@@ -22,13 +22,6 @@ const useFirebase = () => {
             setIsLoading(false);
         });
     };
- 
-    const registerNewUser = (email, password) => {
-        createUserWithEmailAndPassword(auth, email, password)
-        .then(result => {
-            const user = result.user;
-        })
-    };
 
     const emailPasswordLogin = (email, password) => {
         signInWithEmailAndPassword(auth, email, password)
