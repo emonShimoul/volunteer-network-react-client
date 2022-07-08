@@ -12,8 +12,8 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const redirect_uri = location.state?.from || '/register';
-    console.log(location.state?.from);
-    console.log(redirect_uri);
+    // console.log(location.state?.from);
+    // console.log(redirect_uri);
 
     const handleGoogleLogin = () => {
         googleLogin()
