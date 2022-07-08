@@ -7,7 +7,7 @@ import logo from '../../images/logo.png';
 const Header = () => {
     const { pathname } = useLocation();
     const {user, logOut} = useAuth();
-    console.log(user);
+    // console.log(user);
     const navigate = useNavigate();
     const location = useLocation();
     const redirect_uri = location.state?.from || '/login';
