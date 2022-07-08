@@ -1,13 +1,13 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
 import logo from '../../images/logo.png';
 import './Register.css';
 
 const Register = () => {
     const { register, handleSubmit } = useForm();
-    const {user} = useFirebase();
+    const {user} = useAuth();
     const onSubmit = data => console.log(data);
     return (
         <div className='container mt-4 mb-5'>

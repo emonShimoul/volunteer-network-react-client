@@ -8,21 +8,24 @@ import Blog from './components/Blog/Blog';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import AuthProvider from './contexts/AuthProvider';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Header></Header>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/donation' element={<Donation />} />
-          <Route path='/events' element={<PrivateRoute><Events /></PrivateRoute>} />
-          <Route path='/blog' element={<Blog />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-        </Routes>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Header></Header>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/donation' element={<Donation />} />
+            <Route path='/events' element={<PrivateRoute><Events /></PrivateRoute>} />
+            <Route path='/blog' element={<Blog />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }

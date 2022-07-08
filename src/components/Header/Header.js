@@ -1,12 +1,13 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
 import logo from '../../images/logo.png';
 
 const Header = () => {
     const { pathname } = useLocation();
-    const {user, logOut} = useFirebase();
+    const {user, logOut} = useAuth();
+    console.log(user);
     const navigate = useNavigate();
     const location = useLocation();
     const redirect_uri = location.state?.from || '/login';

@@ -5,10 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faG } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../images/logo.png';
 import '../Register/Register.css';
-import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
-    const {googleLogin} = useFirebase();
+    const {googleLogin} = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
     const redirect_uri = location.state?.from || '/register';
