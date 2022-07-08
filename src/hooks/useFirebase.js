@@ -23,13 +23,6 @@ const useFirebase = () => {
         });
     };
 
-    const emailPasswordLogin = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
-        .then(result => {
-            const user = result.user;
-        })
-    };
-
     useEffect(() => {
         const unSubscribed = onAuthStateChanged(auth, user => {
             if(user){
