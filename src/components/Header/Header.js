@@ -48,8 +48,6 @@ const Header = () => {
 
                             {(!user.email) ?
                                 <div>
-                                    <Link className='text-decoration-none text-white' to="/register"><Button variant="primary mx-3">Register</Button></Link>
-                             
                                     <Button variant="secondary">Admin</Button>
                                 </div> :
                                 <div className='pt-1'>
@@ -57,6 +55,7 @@ const Header = () => {
                                     <Button variant="secondary" onClick={handleLogOut}>Log Out</Button>
                                 </div>
                             }
+                            <Link className='text-decoration-none text-white' to="/register"><Button variant="primary mx-3">Register an Event</Button></Link>
                     </Nav>
                     </Navbar.Collapse>
                 </Container>

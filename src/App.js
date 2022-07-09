@@ -22,7 +22,7 @@ function App() {
             <Route path='/events' element={<PrivateRoute><Events /></PrivateRoute>} />
             <Route path='/blog' element={<Blog />} />
             <Route path='/login' element={<Login />} />
-            <Route path='/register' element={<Register />} />
+            <Route path='/register' element={<PrivateRoute><Register /></PrivateRoute>} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
