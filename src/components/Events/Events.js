@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 import Event from '../Event/Event';
+import './Events.css';
 
 const Events = () => {
     const[events, setEvents] = useState([]);
@@ -16,15 +17,16 @@ const Events = () => {
         .then(data => setEvents(data));
     }, []);
     return (
-        <div>
-            <h2>This is Events</h2>
-            {
-                events.map(event => <Event 
-                key = {event._id}
-                userData = {event}
-                >
-                </Event> )
-            }
+        <div className="container">
+            <div className='events mt-5'>
+                {
+                    events.map(event => <Event 
+                    key = {event._id}
+                    userData = {event}
+                    >
+                    </Event> )
+                }
+            </div>
         </div>
     );
 };
