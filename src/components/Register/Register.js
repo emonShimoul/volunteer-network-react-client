@@ -6,7 +6,7 @@ import logo from '../../images/logo.png';
 import './Register.css';
 
 const Register = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const {user} = useAuth();
     const onSubmit = data => {
         console.log(data);
@@ -17,6 +17,14 @@ const Register = () => {
             },
             body: JSON.stringify(data)
         })
+        .then(result => result.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                alert("You have been registered successfully!!");
+                reset();
+            }
+        })
     };
     return (
         <div className='container mt-4 mb-5'>
@@ -24,11 +32,11 @@ const Register = () => {
             <div className="register-form rounded">
                 <h4 className='mb-4 fw-bold text-start'>Register as a Volunteer</h4>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input {...register("name")} type="text" value={user.displayName || ''} className='input-group input-field' placeholder="Name" />
-                    <input {...register("email")} type="email" value={user.email || ''} placeholder="Email" className='input-group input-field' />
-                    <input {...register("date")} type="date" className='input-group input-field' />
+                    <input {...register("name")} type="text" value={user.displayName || ''} className='input-group input-field' placeholder="Name" required />
+                    <input {...register("email")} type="email" value={user.email || ''} placeholder="Email" className='input-group input-field' required />
+                    <input {...register("date")} type="date" className='input-group input-field' required />
                     <input {...register("description")} type="text" placeholder="Description" className='input-group input-field' />
-                    <input {...register("event")} type="text" placeholder="Event Name" className='input-group input-field' />
+                    <input {...register("event")} type="text" placeholder="Event Name" className='input-group input-field' required />
                     <input type="submit" className='btn btn-primary mt-4 px-5' value="Registration" />
                 </form>
             </div>
