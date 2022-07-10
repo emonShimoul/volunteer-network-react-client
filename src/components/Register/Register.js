@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import logo from '../../images/logo.png';
 import './Register.css';
@@ -8,6 +8,10 @@ import './Register.css';
 const Register = () => {
     const { register, handleSubmit, reset } = useForm();
     const {user} = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const redirect_uri = location.state?.from || '/events';
+
     const onSubmit = data => {
         console.log(data);
         fetch('http://localhost:5000/events', {
@@ -21,8 +25,8 @@ const Register = () => {
         .then(data => {
             console.log(data);
             if(data.insertedId){
-                alert("You have been registered successfully!!");
-                reset();
+                alert("You have been registered successfully!!")    
+                navigate(redirect_uri);
             }
         })
     };
