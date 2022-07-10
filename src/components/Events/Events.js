@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
+import Event from '../Event/Event';
 
 const Events = () => {
     const[events, setEvents] = useState([]);
     const {user} = useAuth();
-    console.log(user.email);
+    // console.log(user.email);
 
     useEffect(() => {
         fetch(`http://localhost:5000/events/${user.email}`, {
             method: 'GET',
-            headers: { 'Content-Type': 'application/json' },
-            params: {
-                user: {user}
-            }
+            headers: { 'Content-Type': 'application/json' }
         })
         .then(res => res.json())
         .then(data => setEvents(data));
@@ -21,9 +19,11 @@ const Events = () => {
         <div>
             <h2>This is Events</h2>
             {
-                events.map(event => <li key= {event._id}>
-                    {event.name} - {event.event}
-                </li> )
+                events.map(event => <Event 
+                key = {event._id}
+                userData = {event}
+                >
+                </Event> )
             }
         </div>
     );
