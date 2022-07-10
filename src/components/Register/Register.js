@@ -8,7 +8,16 @@ import './Register.css';
 const Register = () => {
     const { register, handleSubmit } = useForm();
     const {user} = useAuth();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        console.log(data);
+        fetch('http://localhost:5000/events', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+    };
     return (
         <div className='container mt-4 mb-5'>
             <Link to="/"><img src={logo} alt="" width="180px" className='mb-4' /></Link>
