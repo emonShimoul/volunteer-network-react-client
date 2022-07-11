@@ -22,18 +22,29 @@ const Home = () => {
                     <button className="btn btn-primary" type="button" id="button-addon2">Search</button>
                 </div>
 
-                <div className="row row-cols-1 row-cols-md-4 g-4 mt-4">
+                <div className="row row-cols-1 row-cols-md-4 mt-4 g-4">
                 {
                     allEvents.map(event => 
-                        
+
                         <div className="col">
-                            <div className="card event-card">
-                                <img src="https://i.ibb.co/34bDjLB/animal-Shelter.png" className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                    <h5 className="card-title text-white">{event.event}</h5>
-                                </div>
+                            <div className="card">
+                            <img src="https://i.ibb.co/34bDjLB/animal-Shelter.png" className="card-img-top" alt="..." />
+                            <div className="card-body">
+                                <h5 className="card-title">{event.event}</h5>
+                                <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <a href="#" class="btn btn-primary">Register</a>
+                            </div>
                             </div>
                         </div>
+                        
+                        // <div className="col">
+                        //     <div className="card event-card">
+                        //         <img src="https://i.ibb.co/34bDjLB/animal-Shelter.png" className="card-img-top" alt="..." />
+                        //         <div className="card-body">
+                        //             <h5 className="card-title text-white">{event.event}</h5>
+                        //         </div>
+                        //     </div>
+                        // </div>
                     
                     )
                 }
