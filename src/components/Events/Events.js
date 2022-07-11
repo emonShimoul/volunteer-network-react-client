@@ -9,7 +9,7 @@ const Events = () => {
     // console.log(user.email);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/events/${user.email}`, {
+        fetch(`http://localhost:5000/registeredUser/${user.email}`, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })
