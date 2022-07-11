@@ -4,7 +4,7 @@ const Event = (props) => {
     const userData = props.userData;
     console.log(userData);
     const handleRemoveEvents = props.handleRemoveEvents;
-    const {event, date} = userData;
+    const {event, date, description} = userData;
     
     // console.log(userData._id);
 
@@ -12,6 +12,7 @@ const Event = (props) => {
         <div className='bg-secondary text-white m-4 py-4 rounded-3'>
             <h5>{event}</h5>
             <p>{date}</p>
+            <p><small>{description}</small></p>
             <button className='btn btn-warning' onClick={() => handleRemoveEvents(userData._id)}>Remove</button>
         </div>
     );

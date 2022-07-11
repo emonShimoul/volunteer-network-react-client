@@ -28,7 +28,7 @@ const Home = () => {
                 {
                     allEvents.map(event => 
 
-                        <div className="col">
+                        <div key={event._id} className="col">
                             <div className="card">
                             <img src={event.imageUrl} className="card-img-top" alt="..." />
                             <div className="card-body">

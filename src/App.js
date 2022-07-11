@@ -12,6 +12,7 @@ import AuthProvider from './contexts/AuthProvider';
 import AdminLogin from './Admin/AdminLogin/AdminLogin';
 import AddEvent from './Admin/AddEvent/AddEvent';
 import RegisterList from './Admin/RegisterList/RegisterList';
+import AllEvents from './Admin/AllEvents/AllEvents';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/adminLogin' element={<AdminLogin />} />
             <Route path='/addEvent' element={<AddEvent />} />
+            <Route path='/allEvents' element={<AllEvents />} />
             <Route path='/registerList' element={<RegisterList />} />
             <Route path='/register/:event' element={<PrivateRoute><Register /></PrivateRoute>} />
           </Routes>

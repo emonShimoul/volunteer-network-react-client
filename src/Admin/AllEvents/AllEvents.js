@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from 'react';
 
 // For Admin User
-const RegisterList = () => {
-    const [users, setUsers] = useState([]);
+const AllEvents = () => {
+    const [events, setEvents] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/registeredUser`, {
+        fetch(`http://localhost:5000/events`, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })
         .then(res => res.json())
-        .then(data => setUsers(data));
+        .then(data => setEvents(data));
     }, []);
-    // console.log(users);
+    console.log(events);
 
     // Delete 
-    const handleRemoveRegisterList = (id) => {
+    const handleRemoveAdminEvents = (id) => {
         const proceed = window.confirm("Are you sure, you want to delete?");
         if(proceed){
-            fetch(`http://localhost:5000/registeredUser/${id}`, {
+            fetch(`http://localhost:5000/events/${id}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' }
             })
@@ -26,8 +26,8 @@ const RegisterList = () => {
                 if(data.deletedCount > 0){
                     // console.log(data);
                     alert("Deleted Successfully!!");
-                    const remainingUsers = users.filter(user => user._id !== id);
-                    setUsers(remainingUsers);
+                    const remainingEvents = events.filter(user => user._id !== id);
+                    setEvents(remainingEvents);
                 }
             });
         }
@@ -38,22 +38,22 @@ const RegisterList = () => {
             <table className="table table-borderless mt-5">
                 <thead className='table-dark'>
                     <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Registration Date</th>
-                        <th scope="col">Events</th>
+                        <th scope="col">Event</th>
+                        <th scope="col">Start Date</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Image URL</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
                 {
-                    users.map(user =>
-                        <tbody key={user._id}>
+                    events.map(event =>
+                        <tbody key={event._id}>
                             <tr>
-                                <td>{user.name}</td>
-                                <td>{user.email}</td>
-                                <td>{user.date}</td>
-                                <td>{user.event}</td>
-                                <td><button className='btn btn-sm btn-danger' onClick={() => handleRemoveRegisterList(user._id)}>Delete</button></td>
+                                <td>{event.eventTitle}</td>
+                                <td>{event.eventDate}</td>
+                                <td>{event.Description}</td>
+                                <td>{event.imageUrl}</td>
+                                <td><button className='btn btn-sm btn-danger' onClick={() => handleRemoveAdminEvents(event._id)}>Delete</button></td>
                             </tr>
                     </tbody>
                     )
@@ -63,4 +63,4 @@ const RegisterList = () => {
     );
 };
 
-export default RegisterList;
+export default AllEvents;

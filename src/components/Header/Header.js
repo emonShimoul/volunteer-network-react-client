@@ -19,7 +19,7 @@ const Header = () => {
 
     // logic for different navbar styles for login and registration route
     let userNav, adminNav;
-    if(pathname === '/admin' || pathname === '/registerList' || pathname === '/addEvent'){
+    if(pathname === '/admin' || pathname === '/registerList' || pathname === '/addEvent' || pathname === '/allEvents'){
         userNav = {
             display: "none"
         };
@@ -88,6 +88,7 @@ const Header = () => {
                         <div className='pt-2'>
                         <NavLink className='text-decoration-none text-dark' to="/registerList">Volunteer Register List</NavLink>
                         <NavLink className='text-decoration-none text-dark px-4' to="/addEvent">Add Event</NavLink>
+                        <NavLink className='text-decoration-none text-dark pe-4' to="/allEvents">All Event</NavLink>
                         </div>
                         <Button variant="secondary" onClick={handleLogOut}>Log Out</Button>
                     </Nav>
