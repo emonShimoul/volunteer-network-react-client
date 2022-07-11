@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const RegisterList = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/events`, {
+        fetch(`http://localhost:5000/registerList`, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })

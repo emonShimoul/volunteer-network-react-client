@@ -22,7 +22,8 @@ const AddEvent = () => {
         .then(data => {
             console.log(data);
             if(data.insertedId){
-                alert("You have been registered successfully!!")    
+                alert("You have been registered successfully!!");
+                reset();    
                 // navigate(redirect_uri);
             }
         })

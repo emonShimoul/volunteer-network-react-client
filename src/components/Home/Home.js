@@ -16,7 +16,7 @@ const Home = () => {
     }, []);
     console.log(allEvents);
     return (
-        <div className='mt-5'>
+        <div className='my-5'>
             <div className="container">
                 <h2>I GROW BY HELPING PEOPLE IN NEED.</h2>
                 <div className="input-group mb-3 w-25 mx-auto mt-4">
@@ -30,9 +30,9 @@ const Home = () => {
 
                         <div className="col">
                             <div className="card">
-                            <img src={event.imageurl} className="card-img-top" alt="..." />
+                            <img src={event.imageUrl} className="card-img-top" alt="..." />
                             <div className="card-body">
-                                <h5 className="card-title">{event.event}</h5>
+                                <h5 className="card-title">{event.eventTitle}</h5>
                                 <p className="card-text"></p>
                                 <Link className='text-decoration-none text-white' to="/register"><Button variant="primary mx-3">Register</Button></Link>
                             </div>
