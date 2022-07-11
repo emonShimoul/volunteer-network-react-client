@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import logo from '../../images/logo.png';
 import './Register.css';
@@ -8,6 +8,8 @@ import './Register.css';
 const Register = () => {
     const { register, handleSubmit, reset } = useForm();
     const {user} = useAuth();
+    const {event} = useParams();
+    console.log(event);
     const navigate = useNavigate();
     const location = useLocation();
     const redirect_uri = location.state?.from || '/events';
@@ -40,8 +42,7 @@ const Register = () => {
                     <input {...register("email")} type="email" value={user.email || ''} placeholder="Email" className='input-group input-field' required />
                     <input {...register("date")} type="date" className='input-group input-field' required />
                     <input {...register("description")} type="text" placeholder="Description" className='input-group input-field' />
-                    <input {...register("event")} type="text" placeholder="Event Name" className='input-group input-field' required />
-                    <input {...register("imageurl")} type="text" placeholder="Image URL" className='input-group input-field' required />
+                    <input {...register("event")} type="text" value={event} placeholder="Event Name" className='input-group input-field' required />
                     <input type="submit" className='btn btn-primary mt-4 px-5' value="Registration" />
                 </form>
             </div>

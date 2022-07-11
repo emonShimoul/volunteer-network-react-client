@@ -28,7 +28,7 @@ function App() {
             <Route path='/adminLogin' element={<AdminLogin />} />
             <Route path='/addEvent' element={<AddEvent />} />
             <Route path='/registerList' element={<RegisterList />} />
-            <Route path='/register' element={<PrivateRoute><Register /></PrivateRoute>} />
+            <Route path='/register/:event' element={<PrivateRoute><Register /></PrivateRoute>} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>

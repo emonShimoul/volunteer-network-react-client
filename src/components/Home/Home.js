@@ -14,7 +14,7 @@ const Home = () => {
         .then(res => res.json())
         .then(data => setAllEvents(data));
     }, []);
-    console.log(allEvents);
+    // console.log(allEvents);
     return (
         <div className='my-5'>
             <div className="container">
@@ -34,7 +34,7 @@ const Home = () => {
                             <div className="card-body">
                                 <h5 className="card-title">{event.eventTitle}</h5>
                                 <p className="card-text"></p>
-                                <Link className='text-decoration-none text-white' to="/register"><Button variant="primary mx-3">Register</Button></Link>
+                                <Link className='text-decoration-none text-white' to={`/register/${event.eventTitle}`}><Button variant="primary mx-3">Register</Button></Link>
                             </div>
                             </div>
                         </div>
