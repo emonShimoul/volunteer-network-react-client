@@ -11,6 +11,8 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AuthProvider from './contexts/AuthProvider';
 import AdminLogin from './Admin/AdminLogin/AdminLogin';
 import Admin from './Admin/Admin/Admin';
+import AddEvent from './Admin/AddEvent/AddEvent';
+import RegisterList from './Admin/RegisterList/RegisterList';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/admin' element={<Admin />} />
             <Route path='/adminLogin' element={<AdminLogin />} />
+            <Route path='/addEvent' element={<AddEvent />} />
+            <Route path='/registerList' element={<RegisterList />} />
             <Route path='/register' element={<PrivateRoute><Register /></PrivateRoute>} />
           </Routes>
         </BrowserRouter>
