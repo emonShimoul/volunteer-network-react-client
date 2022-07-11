@@ -3,7 +3,7 @@ import React from 'react';
 const Event = (props) => {
     const userData = props.userData;
     console.log(userData);
-    const handleRemoveEvents = props.handleRemoveEvents;
+    const handleRemoveUserEvents = props.handleRemoveUserEvents;
     const {event, date, description} = userData;
     
     // console.log(userData._id);
@@ -13,7 +13,7 @@ const Event = (props) => {
             <h5>{event}</h5>
             <p>{date}</p>
             <p><small>{description}</small></p>
-            <button className='btn btn-warning' onClick={() => handleRemoveEvents(userData._id)}>Remove</button>
+            <button className='btn btn-warning' onClick={() => handleRemoveUserEvents(userData._id)}>Remove</button>
         </div>
     );
 };

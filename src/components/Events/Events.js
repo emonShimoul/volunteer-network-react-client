@@ -18,10 +18,10 @@ const Events = () => {
     }, []);
 
     // Delete 
-    const handleRemoveEvents = (id) => {
+    const handleRemoveUserEvents = (id) => {
         const proceed = window.confirm("Are you sure, you want to delete?");
         if(proceed){
-            fetch(`http://localhost:5000/events/${id}`, {
+            fetch(`http://localhost:5000/registeredUser/${id}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' }
             })
@@ -44,7 +44,7 @@ const Events = () => {
                     events.map(event => <Event 
                     key = {event._id}
                     userData = {event}
-                    handleRemoveEvents = {handleRemoveEvents}
+                    handleRemoveUserEvents = {handleRemoveUserEvents}
                     >
                     </Event> )
                 }
