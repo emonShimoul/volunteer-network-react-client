@@ -10,7 +10,7 @@ const Header = () => {
     // console.log(user);
     const navigate = useNavigate();
     const location = useLocation();
-    const redirect_uri = location.state?.from || '/login';
+    const redirect_uri = location.state?.from || '/';
 
     const handleLogOut = () => {
         logOut();
@@ -49,13 +49,13 @@ const Header = () => {
                             {(!user.email) ?
                                 <div>
                                     <Link className='text-decoration-none text-white' to="/adminLogin"><Button variant="secondary">Admin</Button></Link>
+                                    <Link className='text-decoration-none text-white' to="/login"><Button variant="primary mx-3">Login</Button></Link>
                                 </div> :
                                 <div className='pt-1'>
                                     <span className='fw-bold ms-2 me-3'>{user.displayName}</span>
                                     <Button variant="secondary" onClick={handleLogOut}>Log Out</Button>
                                 </div>
                             }
-                            <Link className='text-decoration-none text-white' to="/register"><Button variant="primary mx-3">Register an Event</Button></Link>
                     </Nav>
                     </Navbar.Collapse>
                 </Container>

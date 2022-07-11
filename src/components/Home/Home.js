@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
@@ -31,8 +33,8 @@ const Home = () => {
                             <img src="https://i.ibb.co/34bDjLB/animal-Shelter.png" className="card-img-top" alt="..." />
                             <div className="card-body">
                                 <h5 className="card-title">{event.event}</h5>
-                                <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <a href="#" class="btn btn-primary">Register</a>
+                                <p className="card-text"></p>
+                                <Link className='text-decoration-none text-white' to="/register"><Button variant="primary mx-3">Register</Button></Link>
                             </div>
                             </div>
                         </div>
