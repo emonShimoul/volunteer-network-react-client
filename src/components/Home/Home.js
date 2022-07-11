@@ -30,7 +30,7 @@ const Home = () => {
 
                         <div className="col">
                             <div className="card">
-                            <img src="https://i.ibb.co/34bDjLB/animal-Shelter.png" className="card-img-top" alt="..." />
+                            <img src={event.imageurl} className="card-img-top" alt="..." />
                             <div className="card-body">
                                 <h5 className="card-title">{event.event}</h5>
                                 <p className="card-text"></p>

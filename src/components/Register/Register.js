@@ -41,6 +41,7 @@ const Register = () => {
                     <input {...register("date")} type="date" className='input-group input-field' required />
                     <input {...register("description")} type="text" placeholder="Description" className='input-group input-field' />
                     <input {...register("event")} type="text" placeholder="Event Name" className='input-group input-field' required />
+                    <input {...register("imageurl")} type="text" placeholder="Image URL" className='input-group input-field' required />
                     <input type="submit" className='btn btn-primary mt-4 px-5' value="Registration" />
                 </form>
             </div>

@@ -1,7 +1,7 @@
 .adminHeader {
-    display: flex;
+    display: grid;
+    grid-template-columns: 200px auto 150px;
 }
-
 .adminHeader img {
     width: 180px;
 }
