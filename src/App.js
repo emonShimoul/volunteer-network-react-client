@@ -10,7 +10,6 @@ import Register from './components/Register/Register';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AuthProvider from './contexts/AuthProvider';
 import AdminLogin from './Admin/AdminLogin/AdminLogin';
-import Admin from './Admin/Admin/Admin';
 import AddEvent from './Admin/AddEvent/AddEvent';
 import RegisterList from './Admin/RegisterList/RegisterList';
 
@@ -26,7 +25,6 @@ function App() {
             <Route path='/events' element={<PrivateRoute><Events /></PrivateRoute>} />
             <Route path='/blog' element={<Blog />} />
             <Route path='/login' element={<Login />} />
-            <Route path='/admin' element={<Admin />} />
             <Route path='/adminLogin' element={<AdminLogin />} />
             <Route path='/addEvent' element={<AddEvent />} />
             <Route path='/registerList' element={<RegisterList />} />

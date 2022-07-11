@@ -10,7 +10,7 @@ const AdminLogin = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const redirect_uri = location.state?.from || '/admin';
+    const redirect_uri = location.state?.from || '/registerList';
 
     const {adminEmailPassLogin} = useAuth();
 

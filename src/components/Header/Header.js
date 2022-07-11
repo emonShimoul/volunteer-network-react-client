@@ -72,10 +72,10 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            
+
             <Navbar bg="light" expand="lg" style={adminNav}>
                 <Container>
-                    <NavLink to="/" className="me-auto my-2 py-2 my-lg-0"><img width="170px" src={logo} alt="Logo" /></NavLink>
+                    <NavLink to="/registerList" className="me-auto my-2 py-2 my-lg-0"><img width="170px" src={logo} alt="Logo" /></NavLink>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                     <Nav
