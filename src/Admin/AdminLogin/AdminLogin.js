@@ -50,8 +50,8 @@ const AdminLogin = () => {
     return (
         <div className="container">
             <div className="mt-5">
-                <form onSubmit={handleRegistration} className="w-50 mx-auto">
-                    <h3 className='text-primary mb-4 text-start'>Please Login:</h3>
+                <form onSubmit={handleRegistration} className="w-50 mx-auto border rounded-3 ps-5 py-5">
+                    <h3 className='text-dark mb-4 text-start'>Admin Login</h3>
                     <div className="row mb-3">
                         <div className="col-sm-10">
                             <input onBlur={handleEmailChange} type="email" className="form-control" id="inputEmail3" placeholder='Email' required/>
@@ -63,8 +63,8 @@ const AdminLogin = () => {
                         </div>
                     </div>
                     
-                    <div className="row mb-3 text-danger">{error}</div>
-                    <button type="submit" className="btn btn-primary">Login</button>
+                    <div className="row mb-2 text-danger">{error}</div>
+                    <button type="submit" className="btn btn-warning px-5 me-5 fw-bold">Login</button>
                     {/* <button type='button' onClick={handleResetPassword} className="btn btn-secondary ms-3">Reset Password</button> */}
                 </form>
             </div>
