@@ -9,7 +9,8 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AuthProvider from './contexts/AuthProvider';
-import Admin from './components/Admin/Admin/Admin';
+import AdminLogin from './Admin/AdminLogin/AdminLogin';
+import Admin from './Admin/Admin/Admin';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path='/blog' element={<Blog />} />
             <Route path='/login' element={<Login />} />
             <Route path='/admin' element={<Admin />} />
+            <Route path='/adminLogin' element={<AdminLogin />} />
             <Route path='/register' element={<PrivateRoute><Register /></PrivateRoute>} />
           </Routes>
         </BrowserRouter>

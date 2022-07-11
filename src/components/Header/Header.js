@@ -48,7 +48,7 @@ const Header = () => {
 
                             {(!user.email) ?
                                 <div>
-                                    <Link className='text-decoration-none text-white' to="/admin"><Button variant="secondary">Admin</Button></Link>
+                                    <Link className='text-decoration-none text-white' to="/adminLogin"><Button variant="secondary">Admin</Button></Link>
                                 </div> :
                                 <div className='pt-1'>
                                     <span className='fw-bold ms-2 me-3'>{user.displayName}</span>
