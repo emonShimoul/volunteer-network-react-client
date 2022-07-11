@@ -1,9 +1,7 @@
 .adminHeader {
     display: flex;
 }
-.adminHeader h2{
-    /* display: flex; */
-}
+
 .adminHeader img {
     width: 180px;
 }
