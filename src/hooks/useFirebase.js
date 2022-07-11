@@ -25,16 +25,8 @@ const useFirebase = () => {
     };
 
     const adminEmailPassLogin = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
-        .then(result => {
-            const user = result.user;
-            console.log(user);
-            // setError('');
-        })
-        .catch(error => {
-            // setError(error.message);
-            console.log(error.message);
-        })
+        return signInWithEmailAndPassword(auth, email, password)
+        
     }
 
     useEffect(() => {

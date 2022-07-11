@@ -22,17 +22,22 @@ const AdminLogin = () => {
           return;
         }
         // processLogin(email, password);
-        adminEmailPassLogin(email, password);
+        processLogin(email, password);
       }
 
-    // const processLogin = (email, password) => {
-    //     adminEmailPassLogin()
-    //     .then(result => {
-    //         const user = result.user;
-    //         console.log(user);
-    //         setError('');
-    //     })
-    // }
+    const processLogin = (email, password) => {
+        adminEmailPassLogin(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+            setError('');
+            navigate(redirect_uri);
+        })
+        .catch(error => {
+            setError(error.message);
+            // console.log(error.message);
+        })
+    }
 
     const handleEmailChange = e => {
     setEmail(e.target.value);
