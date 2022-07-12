@@ -53,9 +53,9 @@ const Header = () => {
                     <Nav>
                         <div className='pt-2'>
                         <NavLink className='text-decoration-none text-dark px-3' to="/">Home</NavLink>
-                        <NavLink className='text-decoration-none text-dark px-3' to="/donation">Donation</NavLink>
+                        {/* <NavLink className='text-decoration-none text-dark px-3' to="/donation">Donation</NavLink> */}
                         <NavLink className='text-decoration-none text-dark px-3' to="/events">Events</NavLink>
-                        <NavLink className='text-decoration-none text-dark px-3' to="/blog">Blog</NavLink>
+                        {/* <NavLink className='text-decoration-none text-dark px-3' to="/blog">Blog</NavLink> */}
                         </div>
 
                             {(!user.email) ?
