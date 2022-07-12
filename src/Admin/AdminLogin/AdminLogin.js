@@ -51,7 +51,8 @@ const AdminLogin = () => {
         <div className="container">
             <div className="mt-5">
                 <form onSubmit={handleRegistration} className="w-50 mx-auto border rounded-3 ps-5 py-5">
-                    <h3 className='text-dark mb-4 text-start'>Admin Login</h3>
+                    <h3 className='text-dark text-start'>Admin Login </h3>
+                    <p className='text-start'><small>(<span className='fw-bold'>email:</span> admin@demo.com /<span className='fw-bold'> pass:</span> admin123)</small></p>
                     <div className="row mb-3">
                         <div className="col-sm-10">
                             <input onBlur={handleEmailChange} type="email" className="form-control" id="inputEmail3" placeholder='Email' required/>
