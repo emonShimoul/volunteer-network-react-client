@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 const AllEvents = () => {
     const [events, setEvents] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/events`, {
+        fetch(`https://hidden-eyrie-63764.herokuapp.com/events`, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })
@@ -17,7 +17,7 @@ const AllEvents = () => {
     const handleRemoveAdminEvents = (id) => {
         const proceed = window.confirm("Are you sure, you want to delete?");
         if(proceed){
-            fetch(`http://localhost:5000/events/${id}`, {
+            fetch(`https://hidden-eyrie-63764.herokuapp.com/events/${id}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' }
             })

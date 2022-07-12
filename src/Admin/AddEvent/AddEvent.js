@@ -11,7 +11,7 @@ const AddEvent = () => {
 
     const onSubmit = data => {
         console.log(data);
-        fetch('http://localhost:5000/events', {
+        fetch('https://hidden-eyrie-63764.herokuapp.com/events', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

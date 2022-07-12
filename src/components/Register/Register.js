@@ -16,7 +16,7 @@ const Register = () => {
 
     const onSubmit = data => {
         console.log(data);
-        fetch('http://localhost:5000/registeredUser', {
+        fetch('https://hidden-eyrie-63764.herokuapp.com/registeredUser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

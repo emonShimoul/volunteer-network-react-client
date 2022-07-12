@@ -9,7 +9,7 @@ const Events = () => {
     // console.log(user.email);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/registeredUser/${user.email}`, {
+        fetch(`https://hidden-eyrie-63764.herokuapp.com/registeredUser/${user.email}`, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })
@@ -21,7 +21,7 @@ const Events = () => {
     const handleRemoveUserEvents = (id) => {
         const proceed = window.confirm("Are you sure, you want to delete?");
         if(proceed){
-            fetch(`http://localhost:5000/registeredUser/${id}`, {
+            fetch(`https://hidden-eyrie-63764.herokuapp.com/registeredUser/${id}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' }
             })
