@@ -13,6 +13,7 @@ import AdminLogin from './Admin/AdminLogin/AdminLogin';
 import AddEvent from './Admin/AddEvent/AddEvent';
 import RegisterList from './Admin/RegisterList/RegisterList';
 import AllEvents from './Admin/AllEvents/AllEvents';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path='/registerList' element={<RegisterList />} />
             <Route path='/register/:event' element={<PrivateRoute><Register /></PrivateRoute>} />
           </Routes>
+          <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
     </div>
